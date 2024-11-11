@@ -133,7 +133,7 @@ display(
   margin: 1rem 0;
   padding: 1rem 0;
   max-width: none;
-  font-size: 10vw;
+  font-size: 12vw;
   font-weight: 900;
   line-height: 1;
   background: linear-gradient(30deg, var(--theme-foreground-focus), currentColor);
