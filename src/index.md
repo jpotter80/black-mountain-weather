@@ -4,7 +4,7 @@ theme: [ocean-floor, wide]
 
 <div class="hero">
   <h1>Black Mountain, NC Weather Report</h1>
-  <h2>7-day forecast sourced from the National Weather Service</h2>
+  <h2>7-day forecast sourced from the National Weather Service api</h2>
   </div>
 
 
@@ -133,7 +133,7 @@ display(
   margin: 1rem 0;
   padding: 1rem 0;
   max-width: none;
-  font-size: 5vw;
+  font-size: 10vw;
   font-weight: 900;
   line-height: 1;
   background: linear-gradient(30deg, var(--theme-foreground-focus), currentColor);
