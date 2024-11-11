@@ -28,6 +28,12 @@ const forecast = FileAttachment("./data/forecast.json").json();
   The **current** windSpeed is: ${forecast.properties.periods[0].windSpeed}
   
   </h1></div>
+  <div class="card"><h1>
+  
+  The **current** conditions are: ${forecast.properties.periods[0].shortForecast}
+
+  
+  </h1></div>
   </div>
 
 
