@@ -3,7 +3,7 @@ theme: [ocean-floor, wide]
 ---
 
 <div class="hero">
-  <h1>Black Mountain, NC | Weather Report</h1>
+  <h1>Black Mountain, NC<br>Weather Report</h1>
   <h2>7-day forecast sourced from the National Weather Service api</h2>
   </div>
 
