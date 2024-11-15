@@ -15,26 +15,25 @@ const forecast = FileAttachment("./data/forecast.json").json();
 <div class="grid grid-cols-4">
   <div class="card"><h1>
   
-  The **current** time is: ${new Date(now).toLocaleTimeString("en-US")}
+  The **current** time is: <span class="value">${new Date(now).toLocaleTimeString("en-US")}</span>
   
   </h1></div>
   <div class="card"><h1>
   
-  The **current** temperature is: ${forecast.properties.periods[0].temperature}°F
+  The **current** temperature is: <span class="value">${forecast.properties.periods[0].temperature}°F</span>
   
   </h1></div>
   <div class="card"><h1>
   
-  The **current** windSpeed is: ${forecast.properties.periods[0].windSpeed}
+  The **current** windSpeed is: <span class="value">${forecast.properties.periods[0].windSpeed}</span>
   
   </h1></div>
   <div class="card"><h1>
   
-  The **current** conditions are: ${forecast.properties.periods[0].shortForecast}
-
+  The **current** conditions are: <span class="value">${forecast.properties.periods[0].shortForecast}</span>
   
   </h1></div>
-  </div>
+</div>
 
 
 ```js
@@ -167,6 +166,10 @@ display(
 /* Add spacing between plot sections */
 .observablehq {
   margin-bottom: 4rem;
+}
+
+.value {
+  color: #d8ff52;
 }
 
 </style>
