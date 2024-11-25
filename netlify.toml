@@ -1,5 +1,6 @@
 [build]
-publish = "dist"
+  publish = "dist"
+  functions = "netlify/functions"
 
 [functions."get-forecast"]
-schedule = "@hourly"
+  schedule = "@hourly"

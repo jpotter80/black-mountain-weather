@@ -17,9 +17,9 @@ export default async function handler(req) {
     );
     const forecast = await json(station.properties.forecastHourly);
     
-    // Write to the public directory so it's accessible via the static site
+    // Write to the dist directory so it's accessible via the static site
     writeFileSync(
-      join(process.cwd(), 'public/data/forecast.json'),
+      join(process.cwd(), 'dist/data/forecast.json'),
       JSON.stringify(forecast)
     );
 
