@@ -1,4 +1,3 @@
-
 import { writeFileSync } from 'fs';
 import { join } from 'path';
 
@@ -20,7 +19,7 @@ export default async function handler(req) {
     
     // Write to the public directory so it's accessible via the static site
     writeFileSync(
-      join(process.cwd(), 'public/forecast.json'),
+      join(process.cwd(), 'public/data/forecast.json'),
       JSON.stringify(forecast)
     );
 
