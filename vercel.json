@@ -1,0 +1,6 @@
+
+{
+  "buildCommand": "observable build",
+  "outputDirectory": "dist",
+  "framework": "other"
+}
