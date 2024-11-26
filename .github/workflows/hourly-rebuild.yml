@@ -1,0 +1,28 @@
+name: Hourly Rebuild
+on:
+  schedule:
+    - cron: '0 * * * *'  # Run every hour
+  workflow_dispatch:      # Allow manual trigger
+
+jobs:
+  trigger-rebuild:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write     # Needed for push access
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      
+      - name: Update timestamp
+        run: |
+          mkdir -p .github/timestamps
+          echo "Last update: $(date -u)" > .github/timestamps/last-rebuild.txt
+          
+      - name: Commit and push if changed
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "GitHub Actions"
+          git add .github/timestamps/last-rebuild.txt
+          git commit -m "chore: trigger rebuild [skip ci]" || exit 0
+          git push
