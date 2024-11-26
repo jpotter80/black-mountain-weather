@@ -15,10 +15,21 @@ jobs:
           fetch-depth: 1
           ref: main
           
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm install
+          
       - name: Pull latest changes
         run: |
           git config --global pull.rebase true
           git pull --rebase origin main
+          
+      - name: Build site
+        run: npm run build
           
       - name: Update timestamp
         run: |

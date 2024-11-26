@@ -1,6 +1,5 @@
-
 {
-  "buildCommand": "observable build",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "other"
 }
